@@ -28,6 +28,7 @@ var Product = new Schema({
 
 var ProductModel = mongoose.model('Product', Product);  
 
+// retrieve list of products
 app.get('/api/products', function (req, res){
   return ProductModel.find(function (err, products) {
     if (!err) {
