@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Demo 1</title>
+</head>
+<body>
+
+	<div id='content'></div>
+    
+  <script src="js/vendor/jquery-1.9.1.min.js"></script>
+  <script src="js/vendor/underscore-min.js"></script>
+  <script src="js/vendor/backbone-min.js"></script>
+  <script src="js/vendor/backbone.marionette.min.js"></script>
+  <script src="js/vendor/backbone.localStorage-min.js"></script>
+	<script src="js/demo1.js"></script>
+
+	<script type="text/template" id="template1">
+		<span>Hello, my name is <%= firstName %> !</span>
+	</script>
+
+	<script type="text/template" id="docs-collection-template">
+        <ol>
+		  <% _.each(docs, function(doc) { %>
+		    <li><a href="#doc/<%= doc.id %>"><%= doc.id %> : <%= doc.title %></a></li>
+		  <% }); %>
+		</ol>
+  </script>
+
+	<script>
+		$(function(){
+			MyApp.start({something: "Un essai"});
+		})
+	</script>
+</body>
+</html>
