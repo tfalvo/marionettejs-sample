@@ -39,6 +39,7 @@ app.get('/api/products', function (req, res){
   });
 });
 
+// add new product
 app.post('/api/products', function (req, res){
   var product;
   console.log("POST: ");
